@@ -6,8 +6,11 @@
          {
 			stage("CheckoutAndBuild") 
 			{	 
-               git 'https://github.com/sumanthskies/DevOpsClassCodes.git' 
-            }
+                                echo "Checking out Code for master"
+				cleanWs deleteDirs: true
+				checkout ([$class: 'GitSCM', branches: [[name: "master"]],userRemoteConfigs: [[ url: 'https://github.com/sumanthskies/DevOpsClassCodes.git']]])
+                                echo "Checking out finished"
+                        }
          }
 
     }
