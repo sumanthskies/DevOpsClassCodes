@@ -4,7 +4,7 @@
          "PATH+MAVEN=${tool 'Maven 3.5'}/bin",
          "JAVA_HOME=${tool 'JDK 8u144'}"])
          {
-			stage("CheckoutAndBuild") 
+			stage("Checkout") 
 			{	 
                                 echo "Checking out Code for master"
 				cleanWs deleteDirs: true
