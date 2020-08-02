@@ -13,7 +13,7 @@
                         }
 		        stage("Build") 
 		        {
-				
+				echo $JAVA_HOME
 				echo "Start Maven build"
 				sh "mvn clean install"
 				echo "Maven build finished"
