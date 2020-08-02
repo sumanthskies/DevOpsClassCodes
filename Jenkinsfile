@@ -8,7 +8,7 @@
 			{	 
                                 echo "Checking out Code for master"
 				cleanWs deleteDirs: true
-				checkout ([$class: 'GitSCM', branches: [[name: "master"]],userRemoteConfigs: [[ url: 'https://github.com/sumanthskies/DevOpsClassCodes.git']]])
+				checkout ([$class: 'GitSCM', branches: [[name: "master"]],userRemoteConfigs: [[ credentialsId: 'sumanthskies',url: 'https://github.com/sumanthskies/DevOpsClassCodes.git']]])
                                 echo "Checking out finished"
                         }
          }
