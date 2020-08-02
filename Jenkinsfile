@@ -11,13 +11,7 @@
 				checkout ([$class: 'GitSCM', branches: [[name: "master"]],userRemoteConfigs: [[ credentialsId: 'sumanthskies',url: 'https://github.com/sumanthskies/DevOpsClassCodes.git']]])
                                 echo "Checking out finished"
                         }
-		        stage("Build") 
-		        {
-				echo $JAVA_HOME
-				echo "Start Maven build"
-				sh "mvn clean install"
-				echo "Maven build finished"
-			}
+
 
          }
 
